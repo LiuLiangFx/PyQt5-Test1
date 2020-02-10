@@ -1,6 +1,6 @@
 import sys
 import MainWinBuddy
-from PyQt5.QtWidgets import QApplication,QMainWindow
+from PySide2.QtWidgets import QApplication,QMainWindow
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
