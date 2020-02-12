@@ -1,26 +1,19 @@
 import sys
-from PyQt5.QtWidgets import QMainWindow,QApplication
-from PyQt5.QtGui import QIcon
-
-class FirstMainWin(QMainWindow):
+from PySide2.QtWidgets import QApplication,QMainWindow
+from PySide2.QtGui import QIcon
+class FistMainWin(QMainWindow):
     def __init__(self):
-        super(FirstMainWin,self).__init__()
+        super(FistMainWin,self).__init__()
+        self.setWindowTitle("第一个应用程序")
+        #self.setWindowIcon(QIcon("./images/Dragon.ico"))
+        self.statu = self.statusBar()
+        self.statu.showMessage("此消息只存在5秒",5000)
+        self.resize(800,600)
 
-        # 设置主窗口的标题
-        self.setWindowTitle('第一个主窗口应用')
 
-        # 设置窗口的尺寸
-        self.resize(400,300)
-
-        self.status = self.statusBar()
-
-        self.status.showMessage('只存在5秒的消息',5000)
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     app = QApplication(sys.argv)
-
-    app.setWindowIcon(QIcon('./images/Dragon.ico'))
-    main = FirstMainWin()
-    main.show()
-
+    app.setWindowIcon(QIcon("./images/Dragon.ico"))
+    win = FistMainWin()
+    win.show()
     sys.exit(app.exec_())
