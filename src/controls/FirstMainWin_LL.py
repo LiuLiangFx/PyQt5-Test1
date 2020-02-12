@@ -9,7 +9,7 @@ class FistMainWin(QMainWindow):
         self.resize(400,300)
         self.status=self.statusBar()
         self.status.showMessage("只存在5秒的消息",5000)
-if __name__ == "__main__" :
+if __name__ == "__main__":
     app = QApplication(sys.argv)
     win = FistMainWin()
     win.show()
