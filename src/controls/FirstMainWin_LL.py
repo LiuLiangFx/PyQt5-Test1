@@ -14,3 +14,4 @@ if __name__ == "__main__":
     win = FistMainWin()
     win.show()
     sys.exit(app.exec_())
+
